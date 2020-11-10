@@ -1,6 +1,6 @@
     conditions:
         all:
-        - fact: payload.issue.labels
+        - fact: payload.issue.labels.name
           operator: contains
           value: 
             - In progress
