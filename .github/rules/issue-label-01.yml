@@ -9,7 +9,7 @@
           value: Bot
     event:
         # type: issuesAddLabels
-        type: projectsCreateCard
+        type: assignIssueToProject
         params:
             data:
             - Kanban2
