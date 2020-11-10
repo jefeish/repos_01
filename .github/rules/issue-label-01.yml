@@ -13,4 +13,4 @@
         params:
             data:
             - Kanban2
-            - In Progress
+            - 'In Progress'
