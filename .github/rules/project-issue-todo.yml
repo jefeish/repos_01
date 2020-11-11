@@ -1,0 +1,19 @@
+---
+conditions:
+  all:
+    - fact: payload.issue.labels.name
+      operator: contains
+      value: To do
+    - fact: payload.issue.labels.name
+      operator: doesNotContain
+      value: Blocked
+
+event:
+  type: assignIssueToProject
+  params:
+    data:
+      - Kanban2
+      - To do
+
+# default is '1'
+priority: 1
