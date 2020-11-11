@@ -1,0 +1,24 @@
+---
+conditions:
+  all:
+    - fact: payload.issue.assignees.login
+      operator: isEmpty
+      value: ""
+    - fact: payload.issue.labels.name
+      operator: contains
+      value: In progress
+    - fact: payload.issue.state
+      operator: notEqual
+      value: closed
+    - fact: payload.issue.labels.name
+      operator: doesNotContain
+      value: Blocked
+
+event:
+  type: issuesAddLabels
+  params:
+    data:
+      - In progress
+
+# default is '1'
+priority: 10
