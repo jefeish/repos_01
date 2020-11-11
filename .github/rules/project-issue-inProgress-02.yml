@@ -15,7 +15,7 @@ conditions:
       value: Blocked
 
 event:
-  type: issuesAddLabels
+  type: issuesReplaceLabels
   params:
     data:
       - To do
