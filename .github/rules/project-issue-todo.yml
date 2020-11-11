@@ -1,4 +1,8 @@
 ---
+# default is '1'
+priority: 10
+name: "project todo rule"
+
 conditions:
   all:
     - fact: payload.issue.labels.name
@@ -14,6 +18,3 @@ event:
     data:
       - Kanban2
       - To do
-
-# default is '1'
-priority: 10
