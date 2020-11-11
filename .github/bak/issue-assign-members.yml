@@ -4,12 +4,12 @@ conditions:
     - fact: payload.issue.title
       operator: regex
       value: ^\[bug\]
-    # Prevent loops
-    - fact: payload.sender.type
-      operator: notEqual
-      value: Bot
+
 event:
   type: issuesAddAssignees
   params:
     data:
       - jefeish
+
+# default is '1'
+priority: 1

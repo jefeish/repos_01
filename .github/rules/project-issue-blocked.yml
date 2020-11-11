@@ -4,13 +4,13 @@ conditions:
     - fact: payload.issue.labels.name
       operator: contains
       value: Blocked
-    # Prevent loops
-    - fact: payload.sender.type
-      operator: notEqual
-      value: Bot
+
 event:
   type: assignIssueToProject
   params:
     data:
       - Kanban2
       - Blocked
+
+# default is '1'
+priority: 1
