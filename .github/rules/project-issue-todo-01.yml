@@ -6,7 +6,7 @@ conditions:
       value: ""
     - fact: payload.issue.labels.name
       operator: contains
-      value: To do
+      value: In progress
     - fact: payload.issue.state
       operator: notEqual
       value: closed
@@ -15,10 +15,9 @@ conditions:
       value: Blocked
 
 event:
-  type: assignIssueToProject
+  type: issuesAddLabels
   params:
     data:
-      - Kanban2
       - To do
 
 # default is '1'
