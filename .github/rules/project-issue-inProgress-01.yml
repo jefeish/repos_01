@@ -1,0 +1,21 @@
+---
+conditions:
+  all:
+    - fact: payload.issue.assignees.login
+      operator: notEmpty
+      value: ""
+    - fact: payload.issue.labels.name
+      operator: contains
+      value: Backlog
+    - fact: payload.issue.labels.name
+      operator: doesNotContain
+      value: Blocked
+
+event:
+  type: issuesReplaceLabels
+  params:
+    data:
+      - In progress
+
+# default is '1'
+priority: 10
