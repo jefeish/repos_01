@@ -5,9 +5,6 @@ conditions:
       operator: notEmpty
       value: ""
     - fact: payload.issue.labels.name
-      operator: contains
-      value: In progress
-    - fact: payload.issue.labels.name
       operator: doesNotContain
       value: Blocked
 
