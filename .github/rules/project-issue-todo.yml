@@ -1,13 +1,16 @@
 ---
 # default is '1'
-priority: 80
-name: "project todo rule"
+priority: 10
+name: "project 'todo' rule"
 
 conditions:
   all:
     - fact: payload.issue.labels.name
       operator: contains
       value: To do
+    - fact: payload.issue.state
+      operator: notEqual
+      value: closed
     - fact: payload.issue.labels.name
       operator: doesNotContain
       value: Blocked

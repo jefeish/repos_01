@@ -1,15 +1,16 @@
 ---
+# default is '1'
+priority: 10
+name: "project 'in progress' rule"
+
 conditions:
   all:
-    - fact: payload.issue.assignees.login
-      operator: notEmpty
-      value: ""
-    - fact: payload.issue.state
-      operator: notEqual
-      value: closed
     - fact: payload.issue.labels.name
       operator: contains
       value: In progress
+    - fact: payload.issue.state
+      operator: notEqual
+      value: closed
     - fact: payload.issue.labels.name
       operator: doesNotContain
       value: Blocked
@@ -20,6 +21,3 @@ event:
     data:
       - Kanban2
       - In progress
-
-# default is '1'
-priority: 10

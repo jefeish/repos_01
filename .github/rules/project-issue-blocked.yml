@@ -1,9 +1,16 @@
 ---
+# default is '1'
+priority: 10
+name: "project 'blocked'' rule"
+
 conditions:
   all:
     - fact: payload.issue.labels.name
       operator: contains
       value: Blocked
+    - fact: payload.issue.state
+      operator: notEqual
+      value: closed
 
 event:
   type: assignIssueToProject
@@ -11,6 +18,3 @@ event:
     data:
       - Kanban2
       - Blocked
-
-# default is '1'
-priority: 50

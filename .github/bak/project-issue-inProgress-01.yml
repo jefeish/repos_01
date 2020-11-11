@@ -1,6 +1,9 @@
 ---
 conditions:
   all:
+    # - fact: payload.issue.assignees.login
+    # operator: notEmpty
+    # value: ""
     - fact: payload.issue.assignees.login
       operator: notEmpty
       value: ""

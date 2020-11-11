@@ -1,4 +1,8 @@
 ---
+# default is '1'
+priority: 10
+name: "project 'clean up' rule"
+
 conditions:
   all:
     - fact: payload.issue.state
@@ -13,6 +17,3 @@ event:
       - To do
       - In progress
       - Blocked
-
-# default is '1'
-priority: 10

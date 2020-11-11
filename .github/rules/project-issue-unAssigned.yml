@@ -1,4 +1,8 @@
 ---
+# default is '1'
+priority: 80
+name: "project todo rule"
+
 conditions:
   all:
     - fact: payload.issue.assignees.login
@@ -19,6 +23,3 @@ event:
   params:
     data:
       - To do
-
-# default is '1'
-priority: 10
