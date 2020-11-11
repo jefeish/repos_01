@@ -1,0 +1,16 @@
+---
+conditions:
+  all:
+    - fact: payload.issue.state
+      operator: equal
+      value: closed
+
+event:
+  type: assignIssueToProject
+  params:
+    data:
+      - Kanban2
+      - Done
+
+# default is '1'
+priority: 20
