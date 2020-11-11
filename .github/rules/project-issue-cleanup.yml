@@ -12,6 +12,7 @@ event:
   type: issuesRemoveLabels
   params:
     data:
-      - Blocked
-      - To do
       - Backlog
+      - To do
+      - In progress
+      - Blocked
