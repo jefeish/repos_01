@@ -7,6 +7,9 @@ conditions:
     - fact: payload.issue.labels.name
       operator: contains
       value: Backlog
+    - fact: payload.issue.state
+      operator: notEqual
+      value: closed
     - fact: payload.issue.labels.name
       operator: doesNotContain
       value: Blocked
