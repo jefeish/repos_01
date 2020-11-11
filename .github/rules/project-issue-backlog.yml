@@ -5,7 +5,7 @@ conditions:
       operator: contains
       value: 'Backlog'
     - fact: payload.issue.status
-      operator: doesNotContain
+      operator: doesNotInclude
       value: closed
     - fact: payload.issue.labels.name
       operator: doesNotContain
