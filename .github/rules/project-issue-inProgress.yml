@@ -4,6 +4,9 @@ conditions:
     - fact: payload.issue.assignees.login
       operator: notEmpty
       value: ""
+    - fact: payload.issue.state
+      operator: notEqual
+      value: closed
     - fact: payload.issue.labels.name
       operator: contains
       value: In progress
@@ -19,4 +22,4 @@ event:
       - In progress
 
 # default is '1'
-priority: 25
+priority: 10
