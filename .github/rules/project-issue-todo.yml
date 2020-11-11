@@ -16,4 +16,4 @@ event:
       - To do
 
 # default is '1'
-priority: 20
+priority: 10
