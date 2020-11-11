@@ -2,7 +2,7 @@
 conditions:
   all:
     - fact: payload.issue.state
-      operator: equals
+      operator: equal
       value: closed
     # Prevent loops
     - fact: payload.sender.type
