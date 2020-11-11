@@ -1,16 +1,16 @@
 ---
 conditions:
-    all:
+  all:
     - fact: payload.issue.state
-      operator: includes
-      value: closed
+      operator: doesNotInclude
+      value: open
     # Prevent loops
     - fact: payload.sender.type
       operator: notEqual
       value: Bot
 event:
-    type: assignIssueToProject
-    params:
-        data:
-        - Kanban2
-        - Done
+  type: assignIssueToProject
+  params:
+    data:
+      - Kanban2
+      - Done

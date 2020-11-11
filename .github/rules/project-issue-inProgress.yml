@@ -1,18 +1,19 @@
-    conditions:
-        all:
-        - fact: payload.issue.labels.name
-          operator: contains
-          value: In progress
-        - fact: payload.issue.labels.name
-          operator: doesNotContain
-          value: Blocked
-        # Prevent loops
-        - fact: payload.sender.type
-          operator: notEqual
-          value: Bot
-    event:
-        type: assignIssueToProject
-        params:
-            data:
-            - Kanban2
-            - In progress
+---
+conditions:
+  all:
+    - fact: payload.issue.labels.name
+      operator: contains
+      value: In progress
+    - fact: payload.issue.labels.name
+      operator: doesNotContain
+      value: Blocked
+    # Prevent loops
+    - fact: payload.sender.type
+      operator: notEqual
+      value: Bot
+event:
+  type: assignIssueToProject
+  params:
+    data:
+      - Kanban2
+      - In progress

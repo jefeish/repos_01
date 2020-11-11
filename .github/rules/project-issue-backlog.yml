@@ -3,13 +3,13 @@ conditions:
   all:
     - fact: payload.issue.labels.name
       operator: contains
-      value: 'Backlog'
+      value: "Backlog"
     - fact: payload.issue.status
       operator: doesNotInclude
       value: closed
     - fact: payload.issue.labels.name
       operator: doesNotContain
-      value: 'Blocked'
+      value: "Blocked"
 
     # Prevent loops
     - fact: payload.sender.type
@@ -19,5 +19,5 @@ event:
   type: assignIssueToProject
   params:
     data:
-    - Kanban2
-    - Backlog
+      - Kanban2
+      - Backlog
