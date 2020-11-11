@@ -1,18 +1,18 @@
-    conditions:
-        all:
-        - fact: payload.issue.status
-          operator: includes
-          value: closed
-        # Prevent loops
-        - fact: payload.sender.type
-          operator: notEqual
-          value: Bot
-    event:
-        type: issuesRemoveLabels
-        params:
-            data:
-            - Backlog
-            - To do
-            - Blocked
-            - In progress
+conditions:
+    all:
+    - fact: payload.issue.status
+      operator: includes
+      value: closed
+    # Prevent loops
+    - fact: payload.sender.type
+      operator: notEqual
+      value: Bot
+event:
+    type: issuesRemoveLabels
+    params:
+        data:
+        - Backlog
+        - To do
+        - Blocked
+        - In progress
             
