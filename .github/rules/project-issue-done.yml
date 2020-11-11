@@ -12,4 +12,4 @@ event:
       - Done
 
 # default is '1'
-priority: 1
+priority: 20
