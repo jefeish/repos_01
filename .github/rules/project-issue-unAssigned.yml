@@ -5,8 +5,8 @@ conditions:
       operator: isEmpty
       value: ""
     - fact: payload.issue.labels.name
-      operator: contains
-      value: In progress
+      operator: doesNotContain
+      value: Backlog
     - fact: payload.issue.state
       operator: notEqual
       value: closed
