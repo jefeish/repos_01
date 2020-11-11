@@ -6,10 +6,9 @@ conditions:
       value: closed
 
 event:
-  type: assignIssueToProject
+  type: issuesReplaceLabels
   params:
     data:
-      - Kanban2
       - Done
 
 # default is '1'
