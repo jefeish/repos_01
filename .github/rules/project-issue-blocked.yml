@@ -13,4 +13,4 @@ event:
       - Blocked
 
 # default is '1'
-priority: 1
+priority: 50
