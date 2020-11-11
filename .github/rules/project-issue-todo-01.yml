@@ -4,9 +4,6 @@ conditions:
     - fact: payload.issue.assignees.login
       operator: isEmpty
       value: ""
-    - fact: payload.issue.labels.name
-      operator: contains
-      value: In progress
     - fact: payload.issue.state
       operator: notEqual
       value: closed
@@ -15,7 +12,7 @@ conditions:
       value: Blocked
 
 event:
-  type: issuesAddLabels
+  type: issuesReplaceLabels
   params:
     data:
       - To do
