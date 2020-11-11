@@ -2,8 +2,8 @@
 conditions:
   all:
     - fact: payload.issue.state
-      operator: doesNotInclude
-      value: open
+      operator: equals
+      value: closed
     # Prevent loops
     - fact: payload.sender.type
       operator: notEqual
