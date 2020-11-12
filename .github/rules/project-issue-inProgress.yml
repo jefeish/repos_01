@@ -5,9 +5,9 @@ name: "project 'in progress' rule"
 
 conditions:
   all:
-    - fact: payload.issue.labels.name
-      operator: contains
-      value: In progress
+    - fact: payload.issue.assignees.login
+      operator: notEmpty
+      value: ""
     - fact: payload.issue.state
       operator: notEqual
       value: closed
