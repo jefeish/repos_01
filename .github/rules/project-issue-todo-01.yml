@@ -23,7 +23,8 @@ conditions:
       value: Bot
 
 event:
-  type: issuesAddLabels
+  type: issuesOverrideLabel
   params:
     data:
+      - In progress
       - To do
