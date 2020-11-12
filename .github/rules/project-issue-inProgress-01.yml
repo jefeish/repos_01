@@ -1,9 +1,10 @@
 ---
+# default is '1'
+priority: 40
+name: "project 'In progress' by assignees rule"
+
 conditions:
   all:
-    # - fact: payload.issue.assignees.login
-    # operator: notEmpty
-    # value: ""
     - fact: payload.issue.assignees.login
       operator: notEmpty
       value: ""
@@ -19,6 +20,3 @@ event:
   params:
     data:
       - In progress
-
-# default is '1'
-priority: 20
