@@ -19,7 +19,8 @@ conditions:
       value: Blocked
 
 event:
-  type: issuesReplaceLabels
+  type: issuesOverrideLabel
   params:
     data:
+      - To do
       - In progress
