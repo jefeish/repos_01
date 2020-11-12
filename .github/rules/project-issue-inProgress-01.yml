@@ -1,6 +1,6 @@
 ---
 # default is '1'
-priority: 40
+priority: 10
 name: "project 'In progress' by assignees rule"
 
 conditions:
@@ -16,7 +16,8 @@ conditions:
       value: Blocked
 
 event:
-  type: issuesAddLabels
+  type: assignIssueToProject
   params:
     data:
+      - Kanban2
       - In progress
