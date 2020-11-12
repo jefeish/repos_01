@@ -8,6 +8,9 @@ conditions:
     - fact: payload.issue.labels.name
       operator: contains
       value: To do
+    - fact: payload.issue.assignees.login
+      operator: isEmpty
+      value: ""
     - fact: payload.issue.state
       operator: notEqual
       value: closed
