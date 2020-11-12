@@ -12,6 +12,7 @@ conditions:
       operator: notIn
       value:
         - Backlog
+        - To do
     - fact: payload.issue.state
       operator: notEqual
       value: closed
