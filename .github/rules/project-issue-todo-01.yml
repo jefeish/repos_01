@@ -9,7 +9,7 @@ conditions:
       operator: isEmpty
       value: ""
     - fact: payload.issue.labels.name
-      operator: doesNotIncludeAll
+      operator: doesNotIncludeAny
       value:
         - Backlog
         - To do
