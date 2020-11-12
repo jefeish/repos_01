@@ -1,9 +1,17 @@
 ---
+# default is '1'
+priority: 10
+name: "project 'To do' unassigned rule"
+
 conditions:
   all:
     - fact: payload.issue.assignees.login
       operator: isEmpty
       value: ""
+    - fact: payload.issue.labels.name
+      operator: notIn
+      value:
+        - Backlog
     - fact: payload.issue.state
       operator: notEqual
       value: closed
@@ -16,6 +24,3 @@ event:
   params:
     data:
       - To do
-
-# default is '1'
-priority: 20
