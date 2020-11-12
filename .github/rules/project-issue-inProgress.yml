@@ -22,5 +22,5 @@ event:
   type: issuesOverrideLabel
   params:
     data:
-      - To do
-      - In progress
+      - "To do"
+      - "In progress"
