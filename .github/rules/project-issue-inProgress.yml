@@ -18,9 +18,9 @@ conditions:
       operator: doesNotContain
       value: Blocked
     # Prevent loops
-    - fact: payload.sender.type
-      operator: notEqual
-      value: Bot
+    # - fact: payload.sender.type
+    #   operator: notEqual
+    #   value: Bot
 
 event:
   type: issuesOverrideLabel
