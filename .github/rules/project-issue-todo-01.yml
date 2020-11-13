@@ -23,7 +23,7 @@ conditions:
       value: Bot
 
 event:
-  type: issuesOverrideLabel
+  type: issuesReplaceLabels
   params:
     data:
       # fix it ...what if the label does not exits !!! ...this one creates it !!!
