@@ -23,7 +23,7 @@ conditions:
       value: Bot
 
 event:
-  type: issuesOverrideLabels
+  type: issuesOverrideLabel
   params:
     data:
       - To do
