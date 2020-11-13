@@ -13,7 +13,7 @@ conditions:
       value: closed
 
 event:
-  type: assignIssueToProject
+  type: issuesAssignToProject
   params:
     data:
       - Kanban2

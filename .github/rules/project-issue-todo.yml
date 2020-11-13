@@ -19,7 +19,7 @@ conditions:
       value: Blocked
 
 event:
-  type: assignIssueToProject
+  type: issuesAssignToProject
   params:
     data:
       - Kanban2
