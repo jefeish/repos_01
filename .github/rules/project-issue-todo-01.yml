@@ -26,6 +26,5 @@ event:
   type: issuesOverrideLabel
   params:
     data:
-      # fix it ...what if the label does not exits !!! ...this one creates it !!!
       - In progress
       - To do
