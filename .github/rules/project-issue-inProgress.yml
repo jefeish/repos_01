@@ -1,30 +1,23 @@
 ---
 # default is '1'
 priority: 10
-name: "project 'in progress' rule"
+name: "project 'In progress' by assignees rule"
 
 conditions:
   all:
-    - fact: payload.issue.assignees.login
-      operator: notEmpty
-      value: ""
     - fact: payload.issue.labels.name
       operator: contains
-      value: To do
+      value: In progress
     - fact: payload.issue.state
       operator: notEqual
       value: closed
     - fact: payload.issue.labels.name
       operator: doesNotContain
       value: Blocked
-    # Prevent loops
-    - fact: payload.sender.type
-      operator: notEqual
-      value: Bot
 
 event:
-  type: issuesOverrideLabel
+  type: issuesAssignToProject
   params:
     data:
-      - To do
+      - Kanban2
       - In progress
