@@ -11,9 +11,6 @@ conditions:
     - fact: payload.issue.labels.name
       operator: doesNotContain
       value: Backlog
-    - fact: payload.issue.labels.name
-      operator: contains
-      value: In progress
     - fact: payload.issue.state
       operator: notEqual
       value: closed
