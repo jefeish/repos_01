@@ -12,7 +12,7 @@ conditions:
       operator: doesNotContain
       value: Backlog
     - fact: payload.issue.labels.name
-      operator: isNotEmpty
+      operator: notEmpty
       value: ""
     - fact: payload.issue.state
       operator: notEqual
