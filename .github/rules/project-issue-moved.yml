@@ -12,3 +12,4 @@ conditions:
 event:
   type: projectToIssueLabel
   params:
+    data:
