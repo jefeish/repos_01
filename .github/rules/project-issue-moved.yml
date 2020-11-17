@@ -1,0 +1,14 @@
+---
+# default is '1'
+priority: 50
+name: "project 'todo' rule"
+
+conditions:
+  all:
+    - fact: payload.issue.state
+      operator: notEqual
+      value: closed
+
+event:
+  type: projectToIssueLabel
+  params:
