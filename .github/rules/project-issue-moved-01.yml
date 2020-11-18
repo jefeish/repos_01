@@ -1,0 +1,28 @@
+---
+# default is '1'
+priority: 50
+name: "project card moved rule"
+
+conditions:
+  all:
+    - fact: payload.action
+      operator: equal
+      value: moved
+    - fact: payload.issue.assignees.login
+      operator: notEmpty
+      value: ""
+    - fact: payload.issue.labels.name
+      operator: contains
+      value: To do
+    - fact: payload.issue.state
+      operator: notEqual
+      value: closed
+    # Prevent loops
+    - fact: payload.sender.type
+      operator: notEqual
+      value: Bot
+
+event:
+  type: issuesRemoveAllAssignees
+  params:
+    data:

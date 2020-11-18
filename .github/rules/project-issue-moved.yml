@@ -5,12 +5,12 @@ name: "project card moved rule"
 
 conditions:
   all:
-    - fact: payload.issue.state
-      operator: notEqual
-      value: closed
     - fact: payload.action
       operator: equal
       value: moved
+    - fact: payload.issue.state
+      operator: notEqual
+      value: closed
     # Prevent loops
     - fact: payload.sender.type
       operator: notEqual
