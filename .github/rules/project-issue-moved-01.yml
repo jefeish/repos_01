@@ -23,6 +23,6 @@ conditions:
       value: Bot
 
 event:
-  type: issuesRemoveAllAssignees
+  type: projectRemoveAllIssueAssignees
   params:
     data:
