@@ -1,6 +1,6 @@
 ---
 # default is '1'
-priority: 10
+priority: 60
 name: "project 'in progress' rule"
 
 conditions:
