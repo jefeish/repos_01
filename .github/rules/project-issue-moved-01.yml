@@ -8,9 +8,9 @@ conditions:
     - fact: payload.action
       operator: equal
       value: moved
-    - fact: payload.issue.assignees.login
-      operator: notEmpty
-      value: ""
+    # - fact: payload.issue.assignees.login
+    #   operator: notEmpty
+    #   value: ""
     # - fact: payload.issue.labels.name
     #   operator: contains
     #   value: To do
