@@ -14,9 +14,9 @@ conditions:
     # - fact: payload.issue.labels.name
     #   operator: contains
     #   value: To do
-    - fact: payload.issue.state
-      operator: notEqual
-      value: closed
+    # - fact: payload.issue.state
+    #   operator: notEqual
+    #   value: closed
     # Prevent loops
     - fact: payload.sender.type
       operator: notEqual
