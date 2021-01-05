@@ -1,0 +1,23 @@
+---
+# default is '1'
+priority: 10
+name: "project 'clean up' rule"
+
+conditions:
+  all:
+    - fact: payload.issue.state
+      operator: equal
+      value: closed
+    # Prevent loops
+    - fact: payload.sender.type
+      operator: notEqual
+      value: Bot
+
+event:
+  type: issuesRemoveLabels
+  params:
+    data:
+      - Backlog
+      - To do
+      - In progress
+      - Blocked

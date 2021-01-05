@@ -1,0 +1,15 @@
+---
+conditions:
+  all:
+    - fact: payload.issue.title
+      operator: regex
+      value: ^\[bug\]
+
+event:
+  type: issuesAddAssignees
+  params:
+    data:
+      - jefeish
+
+# default is '1'
+priority: 1

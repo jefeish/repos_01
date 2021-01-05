@@ -1,0 +1,26 @@
+---
+# default is '1'
+priority: 5
+name: "project 'todo' rule"
+
+conditions:
+  all:
+    - fact: payload.issue.labels.name
+      operator: contains
+      value: To do
+    - fact: payload.issue.assignees.login
+      operator: isEmpty
+      value: ""
+    - fact: payload.issue.state
+      operator: notEqual
+      value: closed
+    - fact: payload.issue.labels.name
+      operator: doesNotContain
+      value: Blocked
+
+event:
+  type: issuesAssignToProject
+  params:
+    data:
+      - Kanban2
+      - To do

@@ -1,0 +1,22 @@
+---
+# default is '1'
+priority: 50
+name: "project card moved rule"
+
+conditions:
+  all:
+    - fact: payload.action
+      operator: equal
+      value: moved
+    - fact: payload.issue.state
+      operator: notEqual
+      value: closed
+    # Prevent loops
+    - fact: payload.sender.type
+      operator: notEqual
+      value: Bot
+
+event:
+  type: projectToIssueLabel
+  params:
+    data:

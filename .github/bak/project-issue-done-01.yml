@@ -1,0 +1,15 @@
+---
+conditions:
+  all:
+    - fact: payload.issue.state
+      operator: equal
+      value: closed
+
+event:
+  type: issuesReplaceLabels
+  params:
+    data:
+      - Done
+
+# default is '1'
+priority: 10
