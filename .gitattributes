@@ -1,2 +1,0 @@
-template.zip filter=lfs diff=lfs merge=lfs -text
-blob/daft-punk.zip filter=lfs diff=lfs merge=lfs -text
