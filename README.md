@@ -2,7 +2,7 @@
 
 ## Foo
 
-[:open_file_folder: Branching-Recommendation](#Branching-Recommendation)
+[:open_file_folder: Branching-Recommendation](###Branching-Recommendation)
 
 
 ## Foo
