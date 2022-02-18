@@ -9,35 +9,6 @@
 
 ## Foo
 
-## Foo
-
-## Foo
-
-## Foo
-
-## Foo
-
-## Foo
-
-## Foo
-
-## Foo
-
-## Foo
-
-## Foo
-
-## Foo
-
-## Foo
-
-## Foo
-
-## Foo
-
-## Foo
-
-## Foo
 
 ### Branching-Recommendation
 
