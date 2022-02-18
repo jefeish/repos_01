@@ -9,6 +9,7 @@
 
 ## Foo
 
+## bar
 
 ### Branching-Recommendation
 
